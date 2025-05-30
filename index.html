@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html lang="pt_BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>TechConnect</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+<div id="main-content">
+    <img width="200px" height="200px" src="imagens/Design sem nome.png" alt="slogan da empresa ">
+    <h1>TechConnect</h1>
+    <center>
+    <p><strong>Conectando ideias, moldando o futuro.</strong></p>
+     </center>
+    <hr>
+    <h2>Participe do TechFuture Summit 2025!</h2>
+    <p>Participe do TechFuture Summit!</p>
+    <div>
+        <ul>
+            <li>Data: 28 de setembro de 2025</li>
+            <li>Local: InovaHub São Paulo — Av. Paulista, 1374 - Bela Vista, São Paulo - SP</li>
+            <li>Horário: Das 9h às 18h</li>
+        </ul>
+    </div>
+    <p>
+        A TechConnect está preparando um evento imperdível para desenvolvedores e designers apaixonados por tecnologia e inovação. No TechFuture Summit, você terá a oportunidade de aprender com especialistas, trocar experiências e ficar por dentro das últimas tendências em tecnologia, design e inovação digital.<br><br>
+        Venha explorar novas ideias, participar de workshops interativos e fazer networking com profissionais que estão moldando o futuro da tecnologia. Não perca essa chance de impulsionar sua carreira e se conectar com a comunidade mais inovadora do mercado!<br>
+        Garanta sua vaga e venha fazer parte do futuro!
+    </p>
+    <ol>
+        <li>Desenvolvimento de Software Personalizado.</li>
+        <li>Consultoria em Tecnologia da Informação.</li>
+        <li>Suporte Técnico e Manutenção.</li>
+    </ol>
+   <h3>Nossos palestrantes:</h3>
+<div class="palestrantes-container">
+    <div class="palestrante-card">
+        <img width="100px" height="100px" src="https://randomuser.me/api/portraits/women/44.jpg" alt="mulher branca de cabelos curtos">
+        <h4>Ana Ribeiro</h4>
+        <h4>Especialista em UX/UI Design - Creative Labs</h4>
+        <p style="font-size:0.98em;">Com mais de uma década dedicada à criação de experiências digitais envolventes, Ana é referência em design centrado no usuário. Já liderou equipes de design em projetos premiados para empresas como Nubank e Globo.com.</p>
+    </div>
+    <div class="palestrante-card">
+        <img width="100px" height="100px" src="https://randomuser.me/api/portraits/men/65.jpg" alt="homem velho de idade calvo">
+        <h4>Carlos Menezes</h4>
+        <h4>Arquiteto de Software – TechNova</h4>
+        <p style="font-size:0.98em;">Engenheiro de software com mais de 15 anos de experiência, Carlos é um dos nomes mais respeitados em arquitetura de sistemas escaláveis. Reconhecido por suas contribuições à comunidade open-source e mentorias técnicas.</p>
+    </div>
+    <div class="palestrante-card">
+        <img width="100px" height="100px" src="https://randomuser.me/api/portraits/women/68.jpg" alt="mulher morena de cabelos pretos curto">
+        <h4>Júlia Takahashi</h4>
+        <h4>Pesquisadora em Inteligência Artificial – Instituto de Tecnologia Avançada</h4>
+        <p style="font-size:0.98em;">Doutora em Ciência da Computação, Júlia é especialista em inteligência artificial com foco em ética algorítmica e aplicações sociais da IA. Sua atuação combina pesquisa de ponta com engajamento público.</p>
+    </div>
+</div>
+    <hr>
+<center>
+    <h2>Inscreva-se Agora!</h2>
+<form id="form-inscricao" onsubmit="return validarFormulario();">
+    <label for="nome">Nome: </label>
+    <input type="text" name="nome" id="nome" placeholder="Insira seu nome aqui" required> <br><br>
+    <label for="email">E-mail:</label>
+    <input type="email" name="email" id="email" placeholder="Insira seu E-mail aqui" required>
+    <h3>Confirme sua presença e garanta seu ingresso</h3>
+    <label for="Ingresso">Selecione o formato de participação:</label>
+    <select id="Ingresso" name="ingresso" required>
+        <option value="">Selecione</option>
+        <option value="Presencial">Presencial</option>
+        <option value="Online">Online</option>
+    </select><br>
+ 
+    <button type="submit">Inscrever-se</button>
+</center>
+</form>
+<script>
+function validarFormulario() {
+    const nome = document.getElementById('nome').value.trim();
+    const email = document.getElementById('email').value.trim();
+    const ingresso = document.getElementById('Ingresso').value;
+
+    if (nome.length < 2) {
+        alert('Por favor, preencha seu nome corretamente.');
+        document.getElementById('nome').focus();
+        return false;
+    }
+
+    const emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
+    if (!emailRegex.test(email)) {
+        alert('Por favor, insira um e-mail válido.');
+        document.getElementById('email').focus();
+        return false;
+    }
+
+    if (!ingresso) {
+        alert('Por favor, selecione o formato de participação.');
+        document.getElementById('Ingresso').focus();
+        return false;
+    }
+
+    return true;
+}
+</script>
+
+</div>
+</body>
+</html>

@@ -1,0 +1,176 @@
+body {
+    font-family: 'Segoe UI', Poppins, sans-serif;
+    background: linear-gradient(135deg, #232526 0%, #414345 100%), 
+        url('https://images.unsplash.com/photo-1461749280684-dccba630e2f6?auto=format&fit=crop&w=1500&q=80') no-repeat center center fixed;
+    background-size: cover;
+    color: #222;
+    margin: 0;
+    padding: 0 0 60px 0;
+    min-height: 100vh;
+}
+body::before {
+    content: "";
+    position: fixed;
+    top: 0; left: 0; right: 0; bottom: 0;
+    background: rgba(24, 24, 24, 0.82);
+    z-index: 0;
+}
+.slogan-img {
+    width: 200px;
+    height: 200px;
+    border-radius: 50%;
+    box-shadow: 0 8px 32px rgba(26,35,126,0.18), 0 2px 8px rgba(26,35,126,0.10);
+    border: 6px solid #fff;
+    background: #f5f7fa;
+    object-fit: cover;
+    transition: transform 0.2s;
+}
+.slogan-img:hover {
+    transform: scale(1.04) rotate(-2deg);
+}
+#main-content {
+    position: relative;
+    z-index: 1;
+    max-width: 900px;
+    margin: 36px auto 0 auto;
+    padding: 36px 32px 32px 32px;
+    background: rgba(255,255,255,0.97);
+    border-radius: 22px;
+    box-shadow: 0 8px 32px rgba(26,35,126,0.13);
+}
+header, h1, h2, h3, h4 {
+    color: #1a237e;
+}
+img {
+    border-radius: 16px;
+    box-shadow: 0 4px 16px rgba(26,35,126,0.10);
+    margin-bottom: 18px;
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+}
+hr {
+    border: none;
+    border-top: 2px solid #e3e6f0;
+    margin: 30px 0;
+}
+.palestrantes-container {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 24px;
+    justify-content: center;
+    align-items: stretch;
+    background: none;
+    box-shadow: none;
+    padding: 0;
+    margin: 0 auto 32px auto;
+    width: 100%;
+    max-width: 900px;
+}
+.palestrante-card {
+    text-align: center;
+    min-width: 180px;
+    flex: 1 1 220px;
+    background: #f5f7fa;
+    border-radius: 14px;
+    box-shadow: 0 2px 12px rgba(26,35,126,0.07);
+    padding: 18px 14px 16px 14px;
+    margin: 0 8px;
+    transition: transform 0.15s;
+}
+.palestrante-card:hover {
+    transform: translateY(-6px) scale(1.03);
+    box-shadow: 0 6px 24px rgba(26,35,126,0.13);
+}
+ul, ol {
+    margin-left: 25px;
+    color: #3949ab;
+    font-size: 1.08em;
+    line-height: 1.7;
+}
+label {
+    font-weight: 500;
+    margin-top: 12px;
+    display: inline-block;
+    color: #283593;
+}
+input[type="text"], input[type="email"], select {
+    width: 40%;
+    padding: 12px;
+    margin: 10px 0 18px 0;
+    border: 1.5px solid #b0bec5;
+    border-radius: 7px;
+    font-size: 1em;
+    background: #f9fafc;
+    transition: border 0.2s, box-shadow 0.2s;
+    box-shadow: 0 1px 4px rgba(26,35,126,0.03);
+    align-self: center;
+}
+input[type="text"]:focus, input[type="email"]:focus, select:focus {
+    border: 2px solid #3949ab;
+    outline: none;
+    box-shadow: 0 0 0 2px #c5cae9;
+}
+button[type="submit"] {
+    background: linear-gradient(90deg, #3949ab 60%, #1a237e 100%);
+    color: #fff;
+    border: none;
+    border-radius: 7px;
+    padding: 14px 36px;
+    font-size: 1.1em;
+    font-weight: bold;
+    cursor: pointer;
+    transition: background 0.2s, transform 0.2s;
+    margin-top: 16px;
+    box-shadow: 0 2px 8px rgba(26,35,126,0.08);
+    letter-spacing: 1px;
+}
+button[type="submit"]:hover {
+    background: linear-gradient(90deg, #1a237e 60%, #3949ab 100%);
+    transform: translateY(-2px) scale(1.03);
+}
+h1 {
+    font-size: 2.6em;
+    text-align: center;
+    margin-bottom: 0.2em;
+    letter-spacing: 1px;
+    text-shadow: 0 2px 8px #c5cae9;
+}
+h2 {
+    font-size: 2em;
+    margin-top: 0.5em;
+    margin-bottom: 0.5em;
+    text-align: center;
+}
+h3, h4 {
+    margin-top: 22px;
+    margin-bottom: 8px;
+}
+p, li {
+    font-size: 1.08em;
+    line-height: 1.7;
+}
+form {
+    margin-top: 32px;
+    margin-bottom: 32px;
+}
+@media (max-width: 700px) {
+    #main-content, div, form {
+        max-width: 98%;
+        padding: 12px 6px;
+    }
+    img {
+        width: 100px !important;
+        height: 100px !important;
+    }
+    h1 {
+        font-size: 1.5em;
+    }
+    h2 {
+        font-size: 1.1em;
+    }
+    button[type="submit"] {
+        padding: 10px 18px;
+        font-size: 1em;
+    }
+}
